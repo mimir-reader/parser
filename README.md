@@ -1,2 +1,4 @@
 # parser
-Parsing engine for Cephalon Read. Scans academic PDFs, building graph-like structures to eliminate jump-navigation &lt;--> Probably
+
+
+v0.1 --> pymupdf4llm -- doesnt work well
