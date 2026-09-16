@@ -2,6 +2,7 @@ from pathlib import Path
 from docling.document_converter import DocumentConverter, PdfFormatOption
 from docling.datamodel.pipeline_options import PdfPipelineOptions
 from docling.datamodel.base_models import InputFormat
+from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
 
 import json
 
@@ -19,7 +20,10 @@ pdf_pipeline_options = PdfPipelineOptions(
 
 converter = DocumentConverter(
     format_options = {
-        InputFormat.PDF: PdfFormatOption(pipeline_options=pdf_pipeline_options)
+        InputFormat.PDF: PdfFormatOption(
+            pipeline_options=pdf_pipeline_options,
+            backend=PyPdfiumDocumentBackend
+        )
     }
 )
 
