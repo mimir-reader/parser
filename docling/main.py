@@ -1,3 +1,11 @@
+# Sources:
+# https://github.com/docling-project/docling/tree/main/docs/examples
+# https://www.ibm.com/think/tutorials/build-multimodal-rag-langchain-with-docling-granite
+# https://github.com/docling-project/docling/discussions/2506
+
+# All accessed at 2026-09-16
+
+
 from pathlib import Path
 from docling.document_converter import DocumentConverter, PdfFormatOption
 from docling.datamodel.pipeline_options import PdfPipelineOptions
@@ -22,7 +30,6 @@ converter = DocumentConverter(
     format_options = {
         InputFormat.PDF: PdfFormatOption(
             pipeline_options=pdf_pipeline_options,
-            backend=PyPdfiumDocumentBackend
         )
     }
 )

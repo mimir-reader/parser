@@ -12,3 +12,7 @@ Unknown text in images: https://github.com/docling-project/docling/discussions/2
 ### v0.2.1 --> docling image ocr issue fix
 
 This version just fixes the text artifact issue in extracted images by utilizing the `PyPdfiumDocumentBackend` backend.
+
+`DoclingParseDocumentBackend` better than `PyPdfiumBackend` for text. we can just extract images from the coords given in `manifest.json`. 
+
+formula quality is bad anyways so it doesnt matter. but `PyPdfiumBackend` mess up tables so that's more of a reason to use the default on.
